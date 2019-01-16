@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/devices"
+        xmlns:tns="http://www.example.com/devices"
+        elementFormDefault="qualified">
+    <element name="devices">
+        <complexType>
+            <sequence>
+                <element name="device"
+                         type="tns:Device"
+                         minOccurs="0"
+                         maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Device">
+        <sequence>
+            <element name="component"
+                     type="tns:Component"
+                     minOccurs="1"
+                     maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="ID" type="ID" use="required" />
+    </complexType>
+
+    <complexType name="Component">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="country" type="string"/>
+            <element name="price" type="positiveInteger"/>
+            <element name="peripheral" type="boolean"/>
+            <element name="power_Consumption_Watt" type="positiveInteger"/>
+            <element name="port">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="COM"></enumeration>
+                        <enumeration value="USB"></enumeration>
+                        <enumeration value="LPT"></enumeration>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="critical" type="boolean"/>
+        </sequence>
+    </complexType>
+</schema>
