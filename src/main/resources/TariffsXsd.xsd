@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/tariffs"
+        xmlns:tns="http://www.example.com/tariffs"
+        elementFormDefault="qualified">
+    <element name="tariffs">
+        <complexType>
+            <sequence>
+                <element name="tariff"
+                         type="tns:Tariff"
+                         maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Tariff">
+        <all>
+            <element name="name" type="string"/>
+            <element name="operator_name">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="mts"/>
+                        <enumeration value="velcome"/>
+                        <enumeration value="life"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="payroll">
+                <simpleType>
+                    <restriction base="float">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="call_price_inside_net">
+                <simpleType>
+                    <restriction base="float">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="call_price_outside_net">
+                <simpleType>
+                    <restriction base="float">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="call_price_to_static_phones">
+                <simpleType>
+                    <restriction base="float">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="sms_price">
+                <simpleType>
+                    <restriction base="float">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="favorite_number_amount" type="positiveInteger" />
+            <element name="price_for_getting_tariff">
+                <simpleType>
+                    <restriction base="float">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </all>
+        <attribute name="ID" type="ID" use="required" />
+    </complexType>
+</schema>

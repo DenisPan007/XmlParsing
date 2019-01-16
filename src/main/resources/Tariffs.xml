@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/tariffs"
+         xsi:schemaLocation="http://www.example.com/tariffs TariffsXsd.xsd">
+    <tariff ID = "1">
+        <name>Ellissa</name>
+        <operator_name>mts</operator_name>
+        <payroll>171</payroll>
+        <call_price_inside_net>5</call_price_inside_net>
+        <call_price_outside_net>10</call_price_outside_net>
+        <call_price_to_static_phones>9</call_price_to_static_phones>
+        <sms_price>30</sms_price>
+        <favorite_number_amount>2</favorite_number_amount>
+        <price_for_getting_tariff>201</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "2">
+        <name>Albert</name>
+        <operator_name>mts</operator_name>
+        <payroll>131</payroll>
+        <call_price_inside_net>4</call_price_inside_net>
+        <call_price_outside_net>6</call_price_outside_net>
+        <call_price_to_static_phones>19</call_price_to_static_phones>
+        <sms_price>23</sms_price>
+        <favorite_number_amount>1.5</favorite_number_amount>
+        <price_for_getting_tariff>235</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "3">
+        <ID>3</ID>
+        <name>Kendall</name>
+        <operator_name>Zoonder</operator_name>
+        <payroll>171</payroll>
+        <call_price_inside_net>1</call_price_inside_net>
+        <call_price_outside_net>5</call_price_outside_net>
+        <call_price_to_static_phones>13</call_price_to_static_phones>
+        <sms_price>20</sms_price>
+        <favorite_number_amount>2.6</favorite_number_amount>
+        <price_for_getting_tariff>369</price_for_getting_tariff>
+    </tariff>
+    <tariff>
+        <ID>4</ID><name>Dill</name><operator_name>Roombo</operator_name><payroll>138</payroll><call_price_inside_net>3</call_price_inside_net><call_price_outside_net>8</call_price_outside_net><call_price_to_static_phones>8</call_price_to_static_phones><sms_price>21</sms_price><favorite_number_amount>5.0</favorite_number_amount><price_for_getting_tariff>496</price_for_getting_tariff></tariff><tariff><ID>5</ID><name>Bonny</name><operator_name>Jetwire</operator_name><payroll>108</payroll><call_price_inside_net>4</call_price_inside_net><call_price_outside_net>4</call_price_outside_net><call_price_to_static_phones>17</call_price_to_static_phones><sms_price>30</sms_price><favorite_number_amount>3.4</favorite_number_amount><price_for_getting_tariff>383</price_for_getting_tariff></tariff><tariff><ID>6</ID><name>Karia</name><operator_name>Twitterworks</operator_name><payroll>114</payroll><call_price_inside_net>4</call_price_inside_net><call_price_outside_net>7</call_price_outside_net><call_price_to_static_phones>13</call_price_to_static_phones><sms_price>25</sms_price><favorite_number_amount>1.7</favorite_number_amount><price_for_getting_tariff>361</price_for_getting_tariff></tariff><tariff><ID>7</ID><name>Mabelle</name><operator_name>Realfire</operator_name><payroll>113</payroll><call_price_inside_net>1</call_price_inside_net><call_price_outside_net>7</call_price_outside_net><call_price_to_static_phones>17</call_price_to_static_phones><sms_price>21</sms_price><favorite_number_amount>3.7</favorite_number_amount><price_for_getting_tariff>345</price_for_getting_tariff></tariff><tariff><ID>8</ID><name>Normie</name><operator_name>Mymm</operator_name><payroll>102</payroll><call_price_inside_net>1</call_price_inside_net><call_price_outside_net>10</call_price_outside_net><call_price_to_static_phones>10</call_price_to_static_phones><sms_price>25</sms_price><favorite_number_amount>3.0</favorite_number_amount><price_for_getting_tariff>257</price_for_getting_tariff></tariff><tariff><ID>9</ID><name>Kermit</name><operator_name>Oba</operator_name><payroll>117</payroll><call_price_inside_net>5</call_price_inside_net><call_price_outside_net>10</call_price_outside_net><call_price_to_static_phones>17</call_price_to_static_phones><sms_price>28</sms_price><favorite_number_amount>3.6</favorite_number_amount><price_for_getting_tariff>305</price_for_getting_tariff></tariff><tariff><ID>10</ID><name>Lyon</name><operator_name>Quamba</operator_name><payroll>157</payroll><call_price_inside_net>2</call_price_inside_net><call_price_outside_net>4</call_price_outside_net><call_price_to_static_phones>13</call_price_to_static_phones><sms_price>22</sms_price><favorite_number_amount>4.7</favorite_number_amount><price_for_getting_tariff>360</price_for_getting_tariff></tariff><tariff><ID>11</ID><name>Bianka</name><operator_name>Voonix</operator_name><payroll>112</payroll><call_price_inside_net>2</call_price_inside_net><call_price_outside_net>5</call_price_outside_net><call_price_to_static_phones>10</call_price_to_static_phones><sms_price>22</sms_price><favorite_number_amount>4.2</favorite_number_amount><price_for_getting_tariff>423</price_for_getting_tariff></tariff><tariff><ID>12</ID><name>Phillida</name><operator_name>Centimia</operator_name><payroll>153</payroll><call_price_inside_net>3</call_price_inside_net><call_price_outside_net>6</call_price_outside_net><call_price_to_static_phones>14</call_price_to_static_phones><sms_price>27</sms_price><favorite_number_amount>4.2</favorite_number_amount><price_for_getting_tariff>450</price_for_getting_tariff></tariff><tariff><ID>13</ID><name>Nico</name><operator_name>Chatterpoint</operator_name><payroll>128</payroll><call_price_inside_net>1</call_price_inside_net><call_price_outside_net>5</call_price_outside_net><call_price_to_static_phones>13</call_price_to_static_phones><sms_price>22</sms_price><favorite_number_amount>4.2</favorite_number_amount><price_for_getting_tariff>488</price_for_getting_tariff></tariff><tariff><ID>14</ID><name>Haley</name><operator_name>Edgetag</operator_name><payroll>114</payroll><call_price_inside_net>1</call_price_inside_net><call_price_outside_net>4</call_price_outside_net><call_price_to_static_phones>8</call_price_to_static_phones><sms_price>22</sms_price><favorite_number_amount>1.1</favorite_number_amount><price_for_getting_tariff>420</price_for_getting_tariff></tariff><tariff><ID>15</ID><name>Cristionna</name><operator_name>Youspan</operator_name><payroll>175</payroll><call_price_inside_net>3</call_price_inside_net><call_price_outside_net>5</call_price_outside_net><call_price_to_static_phones>15</call_price_to_static_phones><sms_price>29</sms_price><favorite_number_amount>3.7</favorite_number_amount><price_for_getting_tariff>486</price_for_getting_tariff></tariff><tariff><ID>16</ID><name>Berkly</name><operator_name>Zooveo</operator_name><payroll>175</payroll><call_price_inside_net>5</call_price_inside_net><call_price_outside_net>9</call_price_outside_net><call_price_to_static_phones>10</call_price_to_static_phones><sms_price>24</sms_price><favorite_number_amount>2.8</favorite_number_amount><price_for_getting_tariff>250</price_for_getting_tariff></tariff></tariffs>

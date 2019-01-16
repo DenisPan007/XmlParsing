@@ -1,6 +1,6 @@
 package entity;
 
-public class Tariffs {
+public class Tariff {
     private String name;
     private String operatorName;
     private double payroll;
@@ -11,9 +11,9 @@ public class Tariffs {
     private  int favoriteNumbersAmount;
     private  double priceForGettingTariff;
 
-    public Tariffs(String name, String operatorName, double payroll, double callPriceInsideNet,
-                   double callPriceOutsideNet, double callPriceToStaticPhones, double smsPrice,
-                   int favoriteNumbersAmount, double priceForGettingTariff) {
+    public Tariff(String name, String operatorName, double payroll, double callPriceInsideNet,
+                  double callPriceOutsideNet, double callPriceToStaticPhones, double smsPrice,
+                  int favoriteNumbersAmount, double priceForGettingTariff) {
         this.name = name;
         this.operatorName = operatorName;
         this.payroll = payroll;
@@ -25,7 +25,7 @@ public class Tariffs {
         this.priceForGettingTariff = priceForGettingTariff;
     }
 
-    public Tariffs() {
+    public Tariff() {
     }
 
     public String getName() {
@@ -103,19 +103,19 @@ public class Tariffs {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Tariffs)) return false;
+        if (!(o instanceof Tariff)) return false;
 
-        Tariffs tariffs = (Tariffs) o;
+        Tariff tariff = (Tariff) o;
 
-        if (Double.compare(tariffs.getPayroll(), getPayroll()) != 0) return false;
-        if (Double.compare(tariffs.getCallPriceInsideNet(), getCallPriceInsideNet()) != 0) return false;
-        if (Double.compare(tariffs.getCallPriceOutsideNet(), getCallPriceOutsideNet()) != 0) return false;
-        if (Double.compare(tariffs.getCallPriceToStaticPhones(), getCallPriceToStaticPhones()) != 0) return false;
-        if (Double.compare(tariffs.getSmsPrice(), getSmsPrice()) != 0) return false;
-        if (getFavoriteNumbersAmount() != tariffs.getFavoriteNumbersAmount()) return false;
-        if (Double.compare(tariffs.getPriceForGettingTariff(), getPriceForGettingTariff()) != 0) return false;
-        if (!getName().equals(tariffs.getName())) return false;
-        return getOperatorName().equals(tariffs.getOperatorName());
+        if (Double.compare(tariff.getPayroll(), getPayroll()) != 0) return false;
+        if (Double.compare(tariff.getCallPriceInsideNet(), getCallPriceInsideNet()) != 0) return false;
+        if (Double.compare(tariff.getCallPriceOutsideNet(), getCallPriceOutsideNet()) != 0) return false;
+        if (Double.compare(tariff.getCallPriceToStaticPhones(), getCallPriceToStaticPhones()) != 0) return false;
+        if (Double.compare(tariff.getSmsPrice(), getSmsPrice()) != 0) return false;
+        if (getFavoriteNumbersAmount() != tariff.getFavoriteNumbersAmount()) return false;
+        if (Double.compare(tariff.getPriceForGettingTariff(), getPriceForGettingTariff()) != 0) return false;
+        if (!getName().equals(tariff.getName())) return false;
+        return getOperatorName().equals(tariff.getOperatorName());
     }
 
     @Override
@@ -142,7 +142,7 @@ public class Tariffs {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Tariffs{");
+        final StringBuilder sb = new StringBuilder("Tariff{");
         sb.append("name='").append(name).append('\'');
         sb.append(", operatorName='").append(operatorName).append('\'');
         sb.append(", payroll=").append(payroll);
