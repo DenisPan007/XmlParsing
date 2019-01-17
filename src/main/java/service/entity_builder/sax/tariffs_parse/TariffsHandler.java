@@ -20,14 +20,10 @@ public class TariffsHandler extends DefaultHandler {
     }
 
     @Override
-    public void startDocument() {
-        System.out.println("Parsing started");
-    }
-    @Override
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
         if ("tariff".equals(localName)) {
             currentTariff = new Tariff();
-            currentTariff.setId(Long.valueOf(attrs.getValue(0)));
+            currentTariff.setId(attrs.getValue(0));
         } else {
             TariffEnum temp = TariffEnum.valueOf(localName.toUpperCase());
             if (withText.contains(temp)) {
@@ -37,17 +33,46 @@ public class TariffsHandler extends DefaultHandler {
     }
     @Override
     public void characters(char[ ] ch, int start, int length) {
-        System.out.print("CHARACTERS!  ");
-        System.out.println(new String(ch, start, length));
+        String s = new String(ch, start, length).trim();
+        if (currentEnum != null) {
+            switch (currentEnum) {
+                case NAME:
+                    currentTariff.setName(s);
+                    break;
+                case OPERATOR_NAME:
+                    currentTariff.setOperatorName(s);
+                    break;
+                case PAYROLL:
+                    currentTariff.setPayroll(Double.parseDouble(s));
+                    break;
+                case CALL_PRICE_INSIDE_NET:
+                    currentTariff.setCallPriceInsideNet(Double.parseDouble(s));
+                    break;
+                case CALL_PRICE_OUTSIDE_NET:
+                    currentTariff.setCallPriceOutsideNet(Double.parseDouble(s));
+                    break;
+                case CALL_PRICE_TO_STATIC_PHONES:
+                    currentTariff.setCallPriceToStaticPhones(Double.parseDouble(s));
+                    break;
+                case SMS_PRICE:
+                    currentTariff.setSmsPrice(Double.parseDouble(s));
+                    break;
+                case FAVORITE_NUMBER_AMOUNT:
+                    currentTariff.setFavoriteNumbersAmount(Integer.parseInt(s));
+                case PRICE_FOR_GETTING_TARIFF:
+                    currentTariff.setSmsPrice(Double.parseDouble(s));
+                default:
+                    throw new EnumConstantNotPresentException(
+                            currentEnum.getDeclaringClass(), currentEnum.name());
+            }
+        }
+        currentEnum = null;
     }
     @Override
     public void endElement(String uri, String localName, String qName) {
-        System.out.println(localName);
-        System.out.println("end element!");
-    }
-    @Override
-    public void endDocument() {
-        System.out.println("\nParsing ended");
+        if ("tariff".equals(localName)) {
+           tariffs.add(currentTariff);
+        }
     }
 }
 
