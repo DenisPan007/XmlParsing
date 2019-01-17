@@ -1,4 +1,4 @@
-package service.deviceParsing;
+package entity.device;
 
 public enum DeviceEnum {
     DEVICES("devices"),

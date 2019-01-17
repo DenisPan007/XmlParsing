@@ -1,9 +1,9 @@
 package service.entity_builder;
 
-import entity.Device;
-import service.deviceParsing.DeviceDOMBuilder;
-import service.deviceParsing.DeviceSAXBuilder;
-import service.deviceParsing.DeviceStAXBuilder;
+import entity.device.Device;
+import service.entity_builder.dom.DeviceDOMBuilder;
+import service.entity_builder.sax.DeviceSAXBuilder;
+import service.entity_builder.stax.DeviceStAXBuilder;
 
 
 public class DeviceBuilderFactory  {

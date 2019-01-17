@@ -1,4 +1,4 @@
-package entity;
+package entity.device;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ public class Component {
     private int price;
     private boolean peripheral;
     private int  powerConsumptionWatt;
-    private Port port;
+    private PortEnum port;
     private  boolean critical;
 
     public String getName() {
@@ -51,11 +51,11 @@ public class Component {
         this.powerConsumptionWatt = powerConsumptionWatt;
     }
 
-    public Port getPort() {
+    public PortEnum getPort() {
         return port;
     }
 
-    public void setPort(Port port) {
+    public void setPort(PortEnum port) {
         this.port = port;
     }
 

@@ -1,8 +1,9 @@
-package service.deviceParsing;
+package service.entity_builder.sax;
 
-import entity.Component;
-import entity.Device;
-import entity.Port;
+import entity.device.Component;
+import entity.device.Device;
+import entity.device.DeviceEnum;
+import entity.device.PortEnum;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -65,7 +66,7 @@ public class DeviceHandler extends DefaultHandler {
                     currentDevice.getComponents().get(currentDevice.getComponents().size()-1).setPowerConsumptionWatt(Integer.parseInt(s));
                     break;
                 case PORT:
-                    currentDevice.getComponents().get(currentDevice.getComponents().size()-1).setPort(Port.valueOf(s));
+                    currentDevice.getComponents().get(currentDevice.getComponents().size()-1).setPort(PortEnum.valueOf(s));
                     break;
                 case CRITICAL:
                     currentDevice.getComponents().get(currentDevice.getComponents().size()-1).setCritical(Boolean.valueOf(s));

@@ -1,10 +1,11 @@
-package service.deviceParsing;
+package service.entity_builder.stax;
 
 
-import entity.Component;
-import entity.Device;
+import entity.device.Component;
+import entity.device.Device;
 
-import entity.Port;
+import entity.device.DeviceEnum;
+import entity.device.PortEnum;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import service.entity_builder.AbstractEntitiesBuilder;
@@ -113,7 +114,7 @@ public class DeviceStAXBuilder extends AbstractEntitiesBuilder<Device> {
                             component.setPowerConsumptionWatt(Integer.parseInt(getXMLText(reader)));
                             break;
                         case PORT:
-                            component.setPort(Port.valueOf(getXMLText(reader)));
+                            component.setPort(PortEnum.valueOf(getXMLText(reader)));
                             break;
                         case CRITICAL:
                             component.setCritical(Boolean.valueOf(getXMLText(reader)));

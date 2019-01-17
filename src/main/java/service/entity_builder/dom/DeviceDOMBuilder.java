@@ -1,8 +1,9 @@
-package service.deviceParsing;
+package service.entity_builder.dom;
 
-import entity.Component;
-import entity.Device;
-import entity.Port;
+import entity.device.Component;
+import entity.device.Device;
+import entity.device.DeviceEnum;
+import entity.device.PortEnum;
 import service.entity_builder.AbstractEntitiesBuilder;
 
 import org.apache.logging.log4j.Level;
@@ -75,7 +76,7 @@ public class DeviceDOMBuilder extends AbstractEntitiesBuilder<Device> {
         currentComponent.setPrice(Integer.parseInt(getElementTextContent(componentElement, DeviceEnum.PRICE.getValue())));
         currentComponent.setPeripheral(Boolean.valueOf(getElementTextContent(componentElement, DeviceEnum.PERIPHERAL.getValue())));
         currentComponent.setPowerConsumptionWatt(Integer.parseInt(getElementTextContent(componentElement, DeviceEnum.POWER_CONSUMPTION_WATT.getValue())));
-        currentComponent.setPort(Port.valueOf(getElementTextContent(componentElement, DeviceEnum.PORT.getValue())));
+        currentComponent.setPort(PortEnum.valueOf(getElementTextContent(componentElement, DeviceEnum.PORT.getValue())));
         currentComponent.setCritical(Boolean.valueOf(getElementTextContent(componentElement, DeviceEnum.CRITICAL.getValue())));
         return currentComponent;
     }
