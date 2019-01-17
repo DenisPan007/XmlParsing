@@ -1,6 +1,7 @@
 package service.entity_builder.sax.tariffs_parse;
 
     public enum TariffEnum {
+        ID("id"),
         TARIFFS("tariffs"),
         TARIFF("tariff"),
         NAME("name"),
