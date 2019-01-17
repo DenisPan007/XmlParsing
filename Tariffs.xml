@@ -5,6 +5,7 @@
     <tariff ID = "id1">
         <name>Ellissa</name>
         <operator_name>mts</operator_name>
+
         <payroll>171</payroll>
         <call_price_inside_net>5</call_price_inside_net>
         <call_price_outside_net>10</call_price_outside_net>
