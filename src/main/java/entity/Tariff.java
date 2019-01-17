@@ -1,6 +1,7 @@
 package entity;
 
 public class Tariff {
+    private long id;
     private String name;
     private String operatorName;
     private double payroll;
@@ -26,6 +27,14 @@ public class Tariff {
     }
 
     public Tariff() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
