@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.example.com/devices"
+          xsi:schemaLocation="http://www.example.com/devices DevicesXSD.xsd">
+
+    <device ID = "ID_1" >
+        <component>
+            <name>Block</name>
+            <country>Russia</country>
+            <price>2</price>
+            <peripheral>true</peripheral>
+            <power_Consumption_Watt>2</power_Consumption_Watt>
+            <port>COM</port>
+            <critical>true</critical>
+        </component>
+        <component>
+            <name>Monitor</name>
+            <country>Russia</country>
+            <price>10</price>
+            <peripheral>true</peripheral>
+            <power_Consumption_Watt>3</power_Consumption_Watt>
+            <port>COM</port>
+            <critical>true</critical>
+        </component>
+    </device>
+    <device ID = "ID_2" >
+        <component>
+            <name>Display</name>
+            <country>Russia</country>
+            <price>2</price>
+            <peripheral>true</peripheral>
+            <power_Consumption_Watt>10</power_Consumption_Watt>
+            <port>USB</port>
+            <critical>true</critical>
+        </component>
+    </device>
+    <device ID = "ID_3" >
+        <component>
+            <name>Block</name>
+            <country>Russia</country>
+            <price>2</price>
+            <peripheral>true</peripheral>
+            <power_Consumption_Watt>2</power_Consumption_Watt>
+            <port>LPT</port>
+            <critical>true</critical>
+        </component>
+        <component>
+            <name>Mouse</name>
+            <country>USA</country>
+            <price>3</price>
+            <peripheral>true</peripheral>
+            <power_Consumption_Watt>2</power_Consumption_Watt>
+            <port>LPT</port>
+            <critical>true</critical>
+        </component>
+        <component>
+            <name>Printer</name>
+            <country>USA</country>
+            <price>10</price>
+            <peripheral>true</peripheral>
+            <power_Consumption_Watt>2</power_Consumption_Watt>
+            <port>LPT</port>
+            <critical>true</critical>
+        </component>
+    </device>
+
+</devices>
