@@ -1,8 +1,10 @@
-package service.entity_builder;
+package service.entity_builder_factory;
 
 import entity.device.Device;
+import service.entity_builder.AbstractEntitiesBuilder;
 import service.entity_builder.dom.DeviceDOMBuilder;
-import service.entity_builder.sax.DeviceSAXBuilder;
+import service.entity_builder.sax.BuilderException;
+import service.entity_builder.sax.device.DeviceSAXBuilder;
 import service.entity_builder.stax.DeviceStAXBuilder;
 
 
@@ -10,7 +12,7 @@ public class DeviceBuilderFactory  {
     private enum TypeParser {
         SAX, STAX, DOM
     }
-    public AbstractEntitiesBuilder<Device> createDeviceBuilder(String typeParser) {
+    public AbstractEntitiesBuilder<Device> createDeviceBuilder(String typeParser) throws BuilderException {
         TypeParser type = TypeParser.valueOf(typeParser.toUpperCase());
         switch (type) {
             case DOM:

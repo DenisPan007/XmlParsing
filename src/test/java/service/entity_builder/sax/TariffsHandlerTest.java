@@ -3,7 +3,7 @@ package service.entity_builder.sax;
 import org.junit.Test;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
-import service.entity_builder.sax.tariffs_parse.TariffsHandler;
+import service.entity_builder.sax.tariff.TariffsHandler;
 
 public class TariffsHandlerTest {
     @Test
@@ -11,7 +11,7 @@ public class TariffsHandlerTest {
         XMLReader reader = XMLReaderFactory.createXMLReader();
         TariffsHandler handler = new TariffsHandler();
         reader.setContentHandler(handler);
-        reader.parse("Tariffs.xml");
+        reader.parse("src/test/resources/tariffs_files/Tariffs.xml");
     }
 
 

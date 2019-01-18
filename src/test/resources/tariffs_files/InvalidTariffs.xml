@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/tariffs"
+         xsi:schemaLocation="http://www.example.com/tariffs TariffsXsd.xsd">
+    <tariff ID = "id1">*****INVALID TEXT*****
+        <name>Ellissa</name>
+        <operator_name>mts</operator_name>
+
+        <payroll>171</payroll>
+        <call_price_inside_net>5</call_price_inside_net>
+        <call_price_outside_net>10</call_price_outside_net>
+        <call_price_to_static_phones>9</call_price_to_static_phones>
+        <sms_price>30</sms_price>
+        <favorite_number_amount>2</favorite_number_amount>
+        <price_for_getting_tariff>201</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id2">
+        <name>Albert</name>
+        <operator_name>mts</operator_name>
+        <payroll>131</payroll>
+        <call_price_inside_net>4</call_price_inside_net>
+        <call_price_outside_net>6</call_price_outside_net>
+        <call_price_to_static_phones>19</call_price_to_static_phones>
+        <sms_price>23</sms_price>
+        <favorite_number_amount>2</favorite_number_amount>
+        <price_for_getting_tariff>235</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id3">
+        <name>Kendall</name>
+        <operator_name>velcome</operator_name>
+        <payroll>171</payroll>
+        <call_price_inside_net>1</call_price_inside_net>
+        <call_price_outside_net>5</call_price_outside_net>
+        <call_price_to_static_phones>13</call_price_to_static_phones>
+        <sms_price>20</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>369</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id4">
+        <name>Dill</name>
+        <operator_name>mts</operator_name>
+        <payroll>138</payroll>
+        <call_price_inside_net>3</call_price_inside_net>
+        <call_price_outside_net>8</call_price_outside_net>
+        <call_price_to_static_phones>8</call_price_to_static_phones>
+        <sms_price>21</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>496</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id5">
+        <name>Bonny</name>
+        <operator_name>life</operator_name>
+        <payroll>108</payroll>
+        <call_price_inside_net>4</call_price_inside_net>
+        <call_price_outside_net>4</call_price_outside_net>
+        <call_price_to_static_phones>17</call_price_to_static_phones>
+        <sms_price>30</sms_price>
+        <favorite_number_amount>2</favorite_number_amount>
+        <price_for_getting_tariff>383</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id6">
+        <name>Karia</name>
+        <operator_name>mts</operator_name>
+        <payroll>114</payroll>
+        <call_price_inside_net>4</call_price_inside_net>
+        <call_price_outside_net>7</call_price_outside_net>
+        <call_price_to_static_phones>13</call_price_to_static_phones>
+        <sms_price>25</sms_price>
+        <favorite_number_amount>5</favorite_number_amount>
+        <price_for_getting_tariff>361</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id7">
+        <name>Mabelle</name>
+        <operator_name>life</operator_name>
+        <payroll>113</payroll>
+        <call_price_inside_net>1</call_price_inside_net>
+        <call_price_outside_net>7</call_price_outside_net>
+        <call_price_to_static_phones>17</call_price_to_static_phones>
+        <sms_price>21</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>345</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id8">
+        <name>Normie</name>
+        <operator_name>velcome</operator_name>
+        <payroll>102</payroll>
+        <call_price_inside_net>1</call_price_inside_net>
+        <call_price_outside_net>10</call_price_outside_net>
+        <call_price_to_static_phones>10</call_price_to_static_phones>
+        <sms_price>25</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>257</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id9">
+        <name>Kermit</name>
+        <operator_name>mts</operator_name>
+        <payroll>117</payroll>
+        <call_price_inside_net>5</call_price_inside_net>
+        <call_price_outside_net>10</call_price_outside_net>
+        <call_price_to_static_phones>17</call_price_to_static_phones>
+        <sms_price>28</sms_price>
+        <favorite_number_amount>4</favorite_number_amount>
+        <price_for_getting_tariff>305</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id10">
+        <name>Lyon</name>
+        <operator_name>life</operator_name>
+        <payroll>157</payroll>
+        <call_price_inside_net>2</call_price_inside_net>
+        <call_price_outside_net>4</call_price_outside_net>
+        <call_price_to_static_phones>13</call_price_to_static_phones>
+        <sms_price>22</sms_price>
+        <favorite_number_amount>5</favorite_number_amount>
+        <price_for_getting_tariff>360</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id11">
+        <name>Bianka</name>
+        <operator_name>velcome</operator_name>
+        <payroll>112</payroll>
+        <call_price_inside_net>2</call_price_inside_net>
+        <call_price_outside_net>5</call_price_outside_net>
+        <call_price_to_static_phones>10</call_price_to_static_phones>
+        <sms_price>22</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>423</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id12">
+        <name>Phillida</name>
+        <operator_name>mts</operator_name>
+        <payroll>153</payroll>
+        <call_price_inside_net>3</call_price_inside_net>
+        <call_price_outside_net>6</call_price_outside_net>
+        <call_price_to_static_phones>14</call_price_to_static_phones>
+        <sms_price>27</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>450</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id13">
+        <name>Nico</name>
+        <operator_name>life</operator_name>
+        <payroll>128</payroll>
+        <call_price_inside_net>1</call_price_inside_net>
+        <call_price_outside_net>5</call_price_outside_net>
+        <call_price_to_static_phones>13</call_price_to_static_phones>
+        <sms_price>22</sms_price>
+        <favorite_number_amount>5</favorite_number_amount>
+        <price_for_getting_tariff>488</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id14">
+        <name>Haley</name>
+        <operator_name>mts</operator_name>
+        <payroll>114</payroll>
+        <call_price_inside_net>1</call_price_inside_net>
+        <call_price_outside_net>4</call_price_outside_net>
+        <call_price_to_static_phones>8</call_price_to_static_phones>
+        <sms_price>22</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>420</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id15">
+        <name>Cristionna</name>
+        <operator_name>velcome</operator_name>
+        <payroll>175</payroll>
+        <call_price_inside_net>3</call_price_inside_net>
+        <call_price_outside_net>5</call_price_outside_net>
+        <call_price_to_static_phones>15</call_price_to_static_phones>
+        <sms_price>29</sms_price>
+        <favorite_number_amount>4</favorite_number_amount>
+        <price_for_getting_tariff>486</price_for_getting_tariff>
+    </tariff>
+    <tariff ID = "id16">
+        <name>Berkly</name>
+        <operator_name>mts</operator_name>
+        <payroll>175</payroll>
+        <call_price_inside_net>5</call_price_inside_net>
+        <call_price_outside_net>9</call_price_outside_net>
+        <call_price_to_static_phones>10</call_price_to_static_phones>
+        <sms_price>24</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>250</price_for_getting_tariff>
+    </tariff>
+</tariffs>

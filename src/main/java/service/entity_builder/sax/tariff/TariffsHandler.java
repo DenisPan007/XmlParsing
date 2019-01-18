@@ -1,11 +1,12 @@
-package service.entity_builder.sax.tariffs_parse;
+package service.entity_builder.sax.tariff;
 
-import entity.Tariff;
+import entity.tariff.Tariff;
+import entity.tariff.TariffEnum;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.EnumSet;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class TariffsHandler extends DefaultHandler {
@@ -15,8 +16,12 @@ public class TariffsHandler extends DefaultHandler {
     private EnumSet<TariffEnum> withText;
 
     public TariffsHandler() {
-        tariffs = new HashSet<Tariff>();
+        tariffs = new LinkedHashSet<>();
         withText = EnumSet.range(TariffEnum.NAME,TariffEnum.PRICE_FOR_GETTING_TARIFF);
+    }
+
+    public Set<Tariff> getTariffs() {
+        return tariffs;
     }
 
     @Override
@@ -59,8 +64,10 @@ public class TariffsHandler extends DefaultHandler {
                     break;
                 case FAVORITE_NUMBER_AMOUNT:
                     currentTariff.setFavoriteNumbersAmount(Integer.parseInt(s));
+                    break;
                 case PRICE_FOR_GETTING_TARIFF:
-                    currentTariff.setSmsPrice(Double.parseDouble(s));
+                    currentTariff.setPriceForGettingTariff(Double.parseDouble(s));
+                    break;
                 default:
                     throw new EnumConstantNotPresentException(
                             currentEnum.getDeclaringClass(), currentEnum.name());

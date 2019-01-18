@@ -1,6 +1,6 @@
 package service.entity_builder.dom;
 
-import entity.Tariff;
+import entity.tariff.Tariff;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +10,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import service.entity_builder.AbstractEntitiesBuilder;
-import service.entity_builder.sax.tariffs_parse.TariffEnum;
+import entity.tariff.TariffEnum;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

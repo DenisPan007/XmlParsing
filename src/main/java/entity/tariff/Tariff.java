@@ -1,4 +1,4 @@
-package entity;
+package entity.tariff;
 
 public class Tariff {
     private String id;

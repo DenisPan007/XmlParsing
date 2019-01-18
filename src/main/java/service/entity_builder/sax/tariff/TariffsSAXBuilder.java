@@ -1,20 +1,25 @@
-package service.entity_builder.sax;
+package service.entity_builder.sax.tariff;
 
+import entity.tariff.Tariff;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
-import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.helpers.XMLReaderFactory;
 import service.entity_builder.AbstractEntitiesBuilder;
+import service.entity_builder.sax.BuilderException;
 
 import java.io.IOException;
 
-public  class SaxEntitiesBuilder<T> extends AbstractEntitiesBuilder<T> {
+public  class TariffsSAXBuilder extends AbstractEntitiesBuilder<Tariff> {
+    private static final Logger LOGGER = LogManager.getLogger();
+    private TariffsHandler tariffsHandler = new TariffsHandler();
     private XMLReader reader;
 
-    public SaxEntitiesBuilder(DefaultHandler handler) throws BuilderException {
+    public TariffsSAXBuilder() throws BuilderException {
         try {
             reader = XMLReaderFactory.createXMLReader();
-            reader.setContentHandler(handler);
+            reader.setContentHandler(tariffsHandler);
         }
         catch (SAXException e){
             throw new BuilderException("Can't create XMLReader",e);
@@ -30,6 +35,6 @@ public  class SaxEntitiesBuilder<T> extends AbstractEntitiesBuilder<T> {
         } catch (IOException e) {
             throw new BuilderException("Can't read file",e);
         }
-        entities = getEntities();
+        entities = tariffsHandler.getTariffs();
     }
 }

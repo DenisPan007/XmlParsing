@@ -1,4 +1,4 @@
-package service.entity_builder.sax.tariffs_parse;
+package entity.tariff;
 
     public enum TariffEnum {
         ID("id"),

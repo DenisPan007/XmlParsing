@@ -11,6 +11,19 @@ public class Component {
     private PortEnum port;
     private  boolean critical;
 
+    public Component(String name, String country, int price, boolean peripheral, int powerConsumptionWatt, PortEnum port, boolean critical) {
+        this.name = name;
+        this.country = country;
+        this.price = price;
+        this.peripheral = peripheral;
+        this.powerConsumptionWatt = powerConsumptionWatt;
+        this.port = port;
+        this.critical = critical;
+    }
+
+    public Component() {
+    }
+
     public String getName() {
         return name;
     }

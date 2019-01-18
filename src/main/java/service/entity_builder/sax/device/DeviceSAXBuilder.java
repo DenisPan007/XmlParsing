@@ -1,4 +1,4 @@
-package service.entity_builder.sax;
+package service.entity_builder.sax.device;
 
 import entity.device.Device;
 import org.apache.logging.log4j.LogManager;
@@ -7,6 +7,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 import service.entity_builder.AbstractEntitiesBuilder;
+import service.entity_builder.sax.BuilderException;
 
 import java.io.IOException;
 
@@ -26,12 +27,13 @@ public class DeviceSAXBuilder extends AbstractEntitiesBuilder<Device> {
     }
 
     @Override
-    public void buildSetEntities(String fileName) {
+    public void buildSetEntities(String fileName) throws BuilderException {
         try {
             entities.clear();
             reader.parse(fileName);
         } catch (IOException | org.xml.sax.SAXException e) {
             LOGGER.error(e);
+            throw  new BuilderException(e);
         }
         entities = deviceHandler.getDevices();
     }

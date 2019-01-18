@@ -8,8 +8,8 @@ public class ValidatorSaxXsdTest {
 
     @Test
     public void validate() throws ValidatorException {
-        String fileName = "Tariffs.xml";
-        String schemaName = "TariffsXsd.xsd";
+        String fileName = "src/test/resources/tariffs_files/Tariffs.xml";
+        String schemaName = "src/test/resources/tariffs_files/TariffsXsd.xsd";
         ValidatorSaxXsd validator = new ValidatorSaxXsd();
         validator.validate(fileName,schemaName);
     }

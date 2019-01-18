@@ -1,4 +1,4 @@
-package service.entity_builder.sax;
+package service.entity_builder.sax.device;
 
 import entity.device.Component;
 import entity.device.Device;
