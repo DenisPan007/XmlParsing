@@ -57,6 +57,7 @@ public class TariffsStAxBuilder extends AbstractEntitiesBuilder<Tariff>{
     private Tariff buildTariff(XMLStreamReader reader, String bankType) throws XMLStreamException /*ParsingException */ {
         Tariff tariff = new Tariff();
         tariff.setId(reader.getAttributeValue(null, TariffEnum.ID.getValue()));
+        tariff.setOldTariff(Boolean.valueOf(reader.getAttributeValue(null, TariffEnum.OLD_TARIFF.getValue())));
         String name;
         while (reader.hasNext()) {
             int type = reader.next();

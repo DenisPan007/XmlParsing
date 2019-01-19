@@ -11,28 +11,30 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import service.builder.AbstractEntitiesBuilder;
 import entity.tariff.TariffEnum;
+import service.builder.sax.BuilderException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
-public class TariffsDOMBuilder extends AbstractEntitiesBuilder<Tariff> {
+public class TariffsDOMBuilder extends AbstractEntitiesBuilder<Tariff>{
     private static final Logger LOGGER = LogManager.getLogger();
     private DocumentBuilder docBuilder;
 
-    public TariffsDOMBuilder() {
+    public TariffsDOMBuilder() throws BuilderException {
         super();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
             LOGGER.log(Level.ERROR, e.getMessage());
+            throw new BuilderException(e);
         }
     }
 
     @Override
-    public void buildSetEntities(String fileName) {
+    public void buildSetEntities(String fileName) throws BuilderException{
         Document doc;
         LOGGER.log(Level.DEBUG, "Start parsing...");
         try {
@@ -47,6 +49,7 @@ public class TariffsDOMBuilder extends AbstractEntitiesBuilder<Tariff> {
             }
         } catch (IOException | SAXException e) {
             LOGGER.log(Level.ERROR, e.getMessage());
+            throw new BuilderException(e);
         }
     }
 
@@ -59,6 +62,7 @@ public class TariffsDOMBuilder extends AbstractEntitiesBuilder<Tariff> {
     private Tariff buildTariff(Element tariffElement) {
         Tariff tariff = new Tariff();
         tariff.setId(tariffElement.getAttribute(TariffEnum.ID.getValue()));
+        tariff.setOldTariff(Boolean.valueOf(tariffElement.getAttribute(TariffEnum.OLD_TARIFF.getValue())));
         tariff.setName(getElementTextContent(tariffElement, TariffEnum.NAME.getValue()));
         tariff.setOperatorName(getElementTextContent(tariffElement, TariffEnum.OPERATOR_NAME.getValue()));
         tariff.setPayroll(Double.parseDouble(getElementTextContent(tariffElement, TariffEnum.PAYROLL.getValue())));

@@ -1,6 +1,9 @@
 package entity.tariff;
 
 public class Tariff {
+    private static int counterId = 0;
+    {counterId++;}
+    private boolean oldTariff;
     private String id;
     private String name;
     private String operatorName;
@@ -15,6 +18,7 @@ public class Tariff {
     public Tariff(String name, String operatorName, double payroll, double callPriceInsideNet,
                   double callPriceOutsideNet, double callPriceToStaticPhones, double smsPrice,
                   int favoriteNumbersAmount, double priceForGettingTariff) {
+        this.id = "id" + counterId;
         this.name = name;
         this.operatorName = operatorName;
         this.payroll = payroll;
@@ -24,9 +28,18 @@ public class Tariff {
         this.smsPrice = smsPrice;
         this.favoriteNumbersAmount = favoriteNumbersAmount;
         this.priceForGettingTariff = priceForGettingTariff;
+        this.oldTariff = false;
     }
 
     public Tariff() {
+    }
+
+    public boolean isOldTariff() {
+        return oldTariff;
+    }
+
+    public void setOldTariff(boolean oldTariff) {
+        this.oldTariff = oldTariff;
     }
 
     public String getId() {
@@ -108,6 +121,9 @@ public class Tariff {
     public void setPriceForGettingTariff(double priceForGettingTariff) {
         this.priceForGettingTariff = priceForGettingTariff;
     }
+    public void clearCounterId(){
+        counterId = 0;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -116,6 +132,7 @@ public class Tariff {
 
         Tariff tariff = (Tariff) o;
 
+        if (isOldTariff() != tariff.isOldTariff()) return false;
         if (Double.compare(tariff.getPayroll(), getPayroll()) != 0) return false;
         if (Double.compare(tariff.getCallPriceInsideNet(), getCallPriceInsideNet()) != 0) return false;
         if (Double.compare(tariff.getCallPriceOutsideNet(), getCallPriceOutsideNet()) != 0) return false;
@@ -123,16 +140,19 @@ public class Tariff {
         if (Double.compare(tariff.getSmsPrice(), getSmsPrice()) != 0) return false;
         if (getFavoriteNumbersAmount() != tariff.getFavoriteNumbersAmount()) return false;
         if (Double.compare(tariff.getPriceForGettingTariff(), getPriceForGettingTariff()) != 0) return false;
-        if (!getName().equals(tariff.getName())) return false;
-        return getOperatorName().equals(tariff.getOperatorName());
+        if (getId() != null ? !getId().equals(tariff.getId()) : tariff.getId() != null) return false;
+        if (getName() != null ? !getName().equals(tariff.getName()) : tariff.getName() != null) return false;
+        return getOperatorName() != null ? getOperatorName().equals(tariff.getOperatorName()) : tariff.getOperatorName() == null;
     }
 
     @Override
     public int hashCode() {
         int result;
         long temp;
-        result = getName().hashCode();
-        result = 31 * result + getOperatorName().hashCode();
+        result = (isOldTariff() ? 1 : 0);
+        result = 31 * result + (getId() != null ? getId().hashCode() : 0);
+        result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+        result = 31 * result + (getOperatorName() != null ? getOperatorName().hashCode() : 0);
         temp = Double.doubleToLongBits(getPayroll());
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         temp = Double.doubleToLongBits(getCallPriceInsideNet());
@@ -148,11 +168,12 @@ public class Tariff {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Tariff{");
-        sb.append("name='").append(name).append('\'');
+        sb.append("oldTariff=").append(oldTariff);
+        sb.append(", id='").append(id).append('\'');
+        sb.append(", name='").append(name).append('\'');
         sb.append(", operatorName='").append(operatorName).append('\'');
         sb.append(", payroll=").append(payroll);
         sb.append(", callPriceInsideNet=").append(callPriceInsideNet);
@@ -164,5 +185,6 @@ public class Tariff {
         sb.append('}');
         return sb.toString();
     }
+
 
 }

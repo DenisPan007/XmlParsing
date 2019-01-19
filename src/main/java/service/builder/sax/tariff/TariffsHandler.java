@@ -29,6 +29,9 @@ public class TariffsHandler extends DefaultHandler {
         if ("tariff".equals(localName)) {
             currentTariff = new Tariff();
             currentTariff.setId(attrs.getValue(0));
+            if (attrs.getLength() > 1) {
+                currentTariff.setOldTariff(Boolean.valueOf(attrs.getValue(1)));
+            }
         } else {
             TariffEnum temp = TariffEnum.valueOf(localName.toUpperCase());
             if (withText.contains(temp)) {

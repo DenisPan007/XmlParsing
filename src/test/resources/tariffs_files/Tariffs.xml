@@ -14,7 +14,7 @@
         <favorite_number_amount>2</favorite_number_amount>
         <price_for_getting_tariff>201</price_for_getting_tariff>
     </tariff>
-    <tariff ID = "id2">
+    <tariff ID = "id2" old_tariff="true">
         <name>Albert</name>
         <operator_name>mts</operator_name>
         <payroll>131</payroll>

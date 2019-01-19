@@ -1,7 +1,8 @@
 package entity.tariff;
 
     public enum TariffEnum {
-        ID("id"),
+        ID("ID"),
+        OLD_TARIFF("old_tariff"),
         TARIFFS("tariffs"),
         TARIFF("tariff"),
         NAME("name"),

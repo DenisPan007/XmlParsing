@@ -22,6 +22,7 @@ public  class TariffsSAXBuilder extends AbstractEntitiesBuilder<Tariff> {
             reader.setContentHandler(tariffsHandler);
         }
         catch (SAXException e){
+            LOGGER.error(e);
             throw new BuilderException("Can't create XMLReader",e);
         }
     }
@@ -31,8 +32,10 @@ public  class TariffsSAXBuilder extends AbstractEntitiesBuilder<Tariff> {
         try {
             reader.parse(fileName);
         } catch (SAXException e) {
+            LOGGER.error(e);
             throw new BuilderException(e);
         } catch (IOException e) {
+            LOGGER.error(e);
             throw new BuilderException("Can't read file",e);
         }
         entities = tariffsHandler.getTariffs();

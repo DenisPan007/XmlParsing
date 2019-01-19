@@ -69,5 +69,6 @@
             </element>
         </all>
         <attribute name="ID" type="ID" use="required" />
+        <attribute name="old_tariff" type="boolean" />
     </complexType>
 </schema>

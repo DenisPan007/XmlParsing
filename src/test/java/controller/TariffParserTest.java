@@ -14,8 +14,10 @@ public class TariffParserTest {
     private Set<Tariff> expectedSet = new LinkedHashSet<>();
     @Before
     public void fillSet(){
+        new Tariff().clearCounterId();
         Tariff t1 = new Tariff("Ellissa","mts",171,5,10,9,30,2,201);
         Tariff t2 = new Tariff("Albert","mts",131,4,6,19,23,2,235);
+        t2.setOldTariff(true);
         Tariff t3 = new Tariff("Kendall","velcome",171,1,5,13,20,1,369);
         Tariff t4 = new Tariff("Dill","mts",138,3,8,8,21,1,496);
         Tariff t5 = new Tariff("Bonny","life",108,4,4,17,30,2,383);
@@ -30,7 +32,6 @@ public class TariffParserTest {
         Tariff t14 = new Tariff("Haley","mts",114,1,4,8,22,1,420);
         Tariff t15 = new Tariff("Cristionna","velcome",175,3,5,15,29,4,486);
         Tariff t16 = new Tariff("Berkly","mts",175,5,9,10,24,3,250);
-
         expectedSet.addAll(Arrays.asList(t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16));
     }
 
