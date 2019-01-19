@@ -1,10 +1,10 @@
-package service.entity_builder.dom;
+package service.builder.dom;
 
 import entity.device.Component;
 import entity.device.Device;
 import entity.device.DeviceEnum;
 import entity.device.PortEnum;
-import service.entity_builder.AbstractEntitiesBuilder;
+import service.builder.AbstractEntitiesBuilder;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;

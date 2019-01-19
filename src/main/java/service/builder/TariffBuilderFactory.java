@@ -1,11 +1,11 @@
-package service.entity_builder_factory;
+package service.builder;
 
 import entity.tariff.Tariff;
-import service.entity_builder.AbstractEntitiesBuilder;
-import service.entity_builder.dom.TariffsDOMBuilder;
-import service.entity_builder.sax.BuilderException;
-import service.entity_builder.sax.tariff.TariffsSAXBuilder;
-import service.entity_builder.stax.TariffsStAxBuilder;
+import service.builder.AbstractEntitiesBuilder;
+import service.builder.dom.TariffsDOMBuilder;
+import service.builder.sax.BuilderException;
+import service.builder.sax.tariff.TariffsSAXBuilder;
+import service.builder.stax.TariffsStAxBuilder;
 
 public class TariffBuilderFactory {
         private enum TypeParser {

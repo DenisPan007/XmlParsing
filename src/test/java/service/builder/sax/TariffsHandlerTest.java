@@ -1,9 +1,9 @@
-package service.entity_builder.sax;
+package service.builder.sax;
 
 import org.junit.Test;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
-import service.entity_builder.sax.tariff.TariffsHandler;
+import service.builder.sax.tariff.TariffsHandler;
 
 public class TariffsHandlerTest {
     @Test

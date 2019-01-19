@@ -1,11 +1,11 @@
-package service.entity_builder_factory;
+package service.builder;
 
 import entity.device.Device;
-import service.entity_builder.AbstractEntitiesBuilder;
-import service.entity_builder.dom.DeviceDOMBuilder;
-import service.entity_builder.sax.BuilderException;
-import service.entity_builder.sax.device.DeviceSAXBuilder;
-import service.entity_builder.stax.DeviceStAXBuilder;
+import service.builder.AbstractEntitiesBuilder;
+import service.builder.dom.DeviceDOMBuilder;
+import service.builder.sax.BuilderException;
+import service.builder.sax.device.DeviceSAXBuilder;
+import service.builder.stax.DeviceStAXBuilder;
 
 
 public class DeviceBuilderFactory  {

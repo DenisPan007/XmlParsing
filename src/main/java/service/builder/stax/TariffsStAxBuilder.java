@@ -1,9 +1,9 @@
-package service.entity_builder.stax;
+package service.builder.stax;
 
 import entity.tariff.Tariff;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import service.entity_builder.AbstractEntitiesBuilder;
+import service.builder.AbstractEntitiesBuilder;
 import entity.tariff.TariffEnum;
 
 import javax.xml.stream.XMLInputFactory;

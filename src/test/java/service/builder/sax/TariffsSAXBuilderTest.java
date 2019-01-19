@@ -1,7 +1,7 @@
-package service.entity_builder.sax;
+package service.builder.sax;
 
 import org.junit.Test;
-import service.entity_builder.sax.tariff.TariffsSAXBuilder;
+import service.builder.sax.tariff.TariffsSAXBuilder;
 
 public class TariffsSAXBuilderTest {
 

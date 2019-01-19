@@ -1,4 +1,4 @@
-package service.entity_builder.stax;
+package service.builder.stax;
 
 
 import entity.device.Component;
@@ -8,7 +8,7 @@ import entity.device.DeviceEnum;
 import entity.device.PortEnum;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import service.entity_builder.AbstractEntitiesBuilder;
+import service.builder.AbstractEntitiesBuilder;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;

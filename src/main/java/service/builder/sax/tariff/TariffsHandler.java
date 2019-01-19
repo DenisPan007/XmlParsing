@@ -1,4 +1,4 @@
-package service.entity_builder.sax.tariff;
+package service.builder.sax.tariff;
 
 import entity.tariff.Tariff;
 import entity.tariff.TariffEnum;

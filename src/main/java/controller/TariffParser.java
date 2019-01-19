@@ -1,9 +1,9 @@
 package controller;
 
 import entity.tariff.Tariff;
-import service.entity_builder.AbstractEntitiesBuilder;
-import service.entity_builder.sax.BuilderException;
-import service.entity_builder_factory.TariffBuilderFactory;
+import service.builder.AbstractEntitiesBuilder;
+import service.builder.sax.BuilderException;
+import service.builder.TariffBuilderFactory;
 import service.validate.ValidatorException;
 import service.validate.ValidatorSaxXsd;
 

@@ -1,4 +1,4 @@
-package service.entity_builder.sax.tariff;
+package service.builder.sax.tariff;
 
 import entity.tariff.Tariff;
 import org.apache.logging.log4j.LogManager;
@@ -6,8 +6,8 @@ import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
-import service.entity_builder.AbstractEntitiesBuilder;
-import service.entity_builder.sax.BuilderException;
+import service.builder.AbstractEntitiesBuilder;
+import service.builder.sax.BuilderException;
 
 import java.io.IOException;
 

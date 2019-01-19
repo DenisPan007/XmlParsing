@@ -1,8 +1,6 @@
-package service.entity_builder.stax;
+package service.builder.stax;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class TariffsStAxBuilderTest {
 

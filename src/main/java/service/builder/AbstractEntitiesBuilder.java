@@ -1,6 +1,6 @@
-package service.entity_builder;
+package service.builder;
 
-import service.entity_builder.sax.BuilderException;
+import service.builder.sax.BuilderException;
 
 import java.util.HashSet;
 import java.util.Set;

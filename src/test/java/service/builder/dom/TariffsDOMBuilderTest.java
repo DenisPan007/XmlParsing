@@ -1,4 +1,4 @@
-package service.entity_builder.dom;
+package service.builder.dom;
 
 import org.junit.Test;
 

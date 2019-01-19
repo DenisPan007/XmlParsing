@@ -1,4 +1,4 @@
-package service.entity_builder.sax;
+package service.builder.sax;
 
 public class BuilderException extends Exception {
     public BuilderException() {

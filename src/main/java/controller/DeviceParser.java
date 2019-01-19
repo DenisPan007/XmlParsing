@@ -1,9 +1,9 @@
 package controller;
 
 import entity.device.Device;
-import service.entity_builder.AbstractEntitiesBuilder;
-import service.entity_builder.sax.BuilderException;
-import service.entity_builder_factory.DeviceBuilderFactory;
+import service.builder.AbstractEntitiesBuilder;
+import service.builder.sax.BuilderException;
+import service.builder.DeviceBuilderFactory;
 import service.validate.ValidatorException;
 import service.validate.ValidatorSaxXsd;
 
