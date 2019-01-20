@@ -158,5 +158,14 @@
             <port>COM</port>
             <critical>true</critical>
         </component>
+        <component>
+            <name>Webcam</name>
+            <country>England</country>
+            <price>10</price>
+            <peripheral>true</peripheral>
+            <power_Consumption_Watt>3</power_Consumption_Watt>
+            <port>USB</port>
+            <critical>false</critical>
+        </component>
     </device>
 </devices>

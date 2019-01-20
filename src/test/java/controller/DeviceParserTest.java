@@ -36,6 +36,7 @@ public class DeviceParserTest {
 
         Component c15 = new Component("Display","USA",20,true,4,COM,true);
         Component c16 = new Component("Block","China",30,false,30,COM,true);
+        Component c17 = new Component("Webcam","England",10,true,3,USB,false);
         Device d1 = new Device();
         Device d2 = new Device();
         Device d3 = new Device();
@@ -53,7 +54,7 @@ public class DeviceParserTest {
         d3.setComponents(Arrays.asList(c4,c5,c6));
         d4.setComponents(Arrays.asList(c7,c8,c9,c10));
         d5.setComponents(Arrays.asList(c11,c12,c13,c14));
-        d6.setComponents(Arrays.asList(c15,c16));
+        d6.setComponents(Arrays.asList(c15,c16,c17));
         expectedSet.addAll(Arrays.asList(d1,d2,d3,d4,d5,d6));
 
     }
