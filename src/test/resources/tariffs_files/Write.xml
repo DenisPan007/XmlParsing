@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tariffs xmlns="http://www.example.com/tariffs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/tariffs TariffsXsd.xsd">
+    <tariff ID="id1">
+        <name>Ellissa</name>
+        <operator_name>mts</operator_name>
+        <payroll>171.0</payroll>
+        <call_price_inside_net>5.0</call_price_inside_net>
+        <call_price_outside_net>10.0</call_price_outside_net>
+        <call_price_to_static_phones>9.0</call_price_to_static_phones>
+        <sms_price>30.0</sms_price>
+        <favorite_number_amount>2</favorite_number_amount>
+        <price_for_getting_tariff>201.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id2" old_tariff="true">
+        <name>Albert</name>
+        <operator_name>mts</operator_name>
+        <payroll>131.0</payroll>
+        <call_price_inside_net>4.0</call_price_inside_net>
+        <call_price_outside_net>6.0</call_price_outside_net>
+        <call_price_to_static_phones>19.0</call_price_to_static_phones>
+        <sms_price>23.0</sms_price>
+        <favorite_number_amount>2</favorite_number_amount>
+        <price_for_getting_tariff>235.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id3">
+        <name>Kendall</name>
+        <operator_name>velcome</operator_name>
+        <payroll>171.0</payroll>
+        <call_price_inside_net>1.0</call_price_inside_net>
+        <call_price_outside_net>5.0</call_price_outside_net>
+        <call_price_to_static_phones>13.0</call_price_to_static_phones>
+        <sms_price>20.0</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>369.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id4">
+        <name>Dill</name>
+        <operator_name>mts</operator_name>
+        <payroll>138.0</payroll>
+        <call_price_inside_net>3.0</call_price_inside_net>
+        <call_price_outside_net>8.0</call_price_outside_net>
+        <call_price_to_static_phones>8.0</call_price_to_static_phones>
+        <sms_price>21.0</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>496.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id5">
+        <name>Bonny</name>
+        <operator_name>life</operator_name>
+        <payroll>108.0</payroll>
+        <call_price_inside_net>4.0</call_price_inside_net>
+        <call_price_outside_net>4.0</call_price_outside_net>
+        <call_price_to_static_phones>17.0</call_price_to_static_phones>
+        <sms_price>30.0</sms_price>
+        <favorite_number_amount>2</favorite_number_amount>
+        <price_for_getting_tariff>383.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id6">
+        <name>Karia</name>
+        <operator_name>mts</operator_name>
+        <payroll>114.0</payroll>
+        <call_price_inside_net>4.0</call_price_inside_net>
+        <call_price_outside_net>7.0</call_price_outside_net>
+        <call_price_to_static_phones>13.0</call_price_to_static_phones>
+        <sms_price>25.0</sms_price>
+        <favorite_number_amount>5</favorite_number_amount>
+        <price_for_getting_tariff>361.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id7">
+        <name>Mabelle</name>
+        <operator_name>life</operator_name>
+        <payroll>113.0</payroll>
+        <call_price_inside_net>1.0</call_price_inside_net>
+        <call_price_outside_net>7.0</call_price_outside_net>
+        <call_price_to_static_phones>17.0</call_price_to_static_phones>
+        <sms_price>21.0</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>345.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id8">
+        <name>Normie</name>
+        <operator_name>velcome</operator_name>
+        <payroll>102.0</payroll>
+        <call_price_inside_net>1.0</call_price_inside_net>
+        <call_price_outside_net>10.0</call_price_outside_net>
+        <call_price_to_static_phones>10.0</call_price_to_static_phones>
+        <sms_price>25.0</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>257.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id9">
+        <name>Kermit</name>
+        <operator_name>mts</operator_name>
+        <payroll>117.0</payroll>
+        <call_price_inside_net>5.0</call_price_inside_net>
+        <call_price_outside_net>10.0</call_price_outside_net>
+        <call_price_to_static_phones>17.0</call_price_to_static_phones>
+        <sms_price>28.0</sms_price>
+        <favorite_number_amount>4</favorite_number_amount>
+        <price_for_getting_tariff>305.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id10">
+        <name>Lyon</name>
+        <operator_name>life</operator_name>
+        <payroll>157.0</payroll>
+        <call_price_inside_net>2.0</call_price_inside_net>
+        <call_price_outside_net>4.0</call_price_outside_net>
+        <call_price_to_static_phones>13.0</call_price_to_static_phones>
+        <sms_price>22.0</sms_price>
+        <favorite_number_amount>5</favorite_number_amount>
+        <price_for_getting_tariff>360.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id11">
+        <name>Bianka</name>
+        <operator_name>velcome</operator_name>
+        <payroll>112.0</payroll>
+        <call_price_inside_net>2.0</call_price_inside_net>
+        <call_price_outside_net>5.0</call_price_outside_net>
+        <call_price_to_static_phones>10.0</call_price_to_static_phones>
+        <sms_price>22.0</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>423.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id12">
+        <name>Phillida</name>
+        <operator_name>mts</operator_name>
+        <payroll>153.0</payroll>
+        <call_price_inside_net>3.0</call_price_inside_net>
+        <call_price_outside_net>6.0</call_price_outside_net>
+        <call_price_to_static_phones>14.0</call_price_to_static_phones>
+        <sms_price>27.0</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>450.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id13">
+        <name>Nico</name>
+        <operator_name>life</operator_name>
+        <payroll>128.0</payroll>
+        <call_price_inside_net>1.0</call_price_inside_net>
+        <call_price_outside_net>5.0</call_price_outside_net>
+        <call_price_to_static_phones>13.0</call_price_to_static_phones>
+        <sms_price>22.0</sms_price>
+        <favorite_number_amount>5</favorite_number_amount>
+        <price_for_getting_tariff>488.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id14">
+        <name>Haley</name>
+        <operator_name>mts</operator_name>
+        <payroll>114.0</payroll>
+        <call_price_inside_net>1.0</call_price_inside_net>
+        <call_price_outside_net>4.0</call_price_outside_net>
+        <call_price_to_static_phones>8.0</call_price_to_static_phones>
+        <sms_price>22.0</sms_price>
+        <favorite_number_amount>1</favorite_number_amount>
+        <price_for_getting_tariff>420.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id15">
+        <name>Cristionna</name>
+        <operator_name>velcome</operator_name>
+        <payroll>175.0</payroll>
+        <call_price_inside_net>3.0</call_price_inside_net>
+        <call_price_outside_net>5.0</call_price_outside_net>
+        <call_price_to_static_phones>15.0</call_price_to_static_phones>
+        <sms_price>29.0</sms_price>
+        <favorite_number_amount>4</favorite_number_amount>
+        <price_for_getting_tariff>486.0</price_for_getting_tariff>
+    </tariff>
+    <tariff ID="id16">
+        <name>Berkly</name>
+        <operator_name>mts</operator_name>
+        <payroll>175.0</payroll>
+        <call_price_inside_net>5.0</call_price_inside_net>
+        <call_price_outside_net>9.0</call_price_outside_net>
+        <call_price_to_static_phones>10.0</call_price_to_static_phones>
+        <sms_price>24.0</sms_price>
+        <favorite_number_amount>3</favorite_number_amount>
+        <price_for_getting_tariff>250.0</price_for_getting_tariff>
+    </tariff>
+</tariffs>

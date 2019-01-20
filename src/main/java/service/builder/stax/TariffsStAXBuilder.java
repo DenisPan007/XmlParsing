@@ -15,11 +15,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class TariffsStAxBuilder extends AbstractEntitiesBuilder<Tariff>{
+public class TariffsStAXBuilder extends AbstractEntitiesBuilder<Tariff>{
     private static final Logger LOGGER = LogManager.getLogger();
     private XMLInputFactory inputFactory;
 
-    public TariffsStAxBuilder() {
+    public TariffsStAXBuilder() {
         inputFactory = XMLInputFactory.newInstance();
     }
 
