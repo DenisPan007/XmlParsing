@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<devices  xmlns="http://www.example.com/devices"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://www.example.com/devices DevicesXSD.xsd">
-    <device ID = "ID_1" >
+<devices xmlns="http://www.example.com/devices" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/devices DevicesXSD.xsd">
+    <device ID="ID_1">
         <component>
             <name>Block</name>
             <country>Russia</country>
@@ -22,7 +20,7 @@
             <critical>true</critical>
         </component>
     </device>
-    <device ID = "ID_2" >
+    <device ID="ID_2">
         <component>
             <name>Display</name>
             <country>Russia</country>
@@ -33,7 +31,7 @@
             <critical>true</critical>
         </component>
     </device>
-    <device ID = "ID_3" >
+    <device ID="ID_3">
         <component>
             <name>Block</name>
             <country>Russia</country>
@@ -62,7 +60,7 @@
             <critical>true</critical>
         </component>
     </device>
-    <device ID = "ID_4" >
+    <device ID="ID_4">
         <component>
             <name>Block</name>
             <country>Russia</country>
@@ -100,7 +98,7 @@
             <critical>true</critical>
         </component>
     </device>
-    <device ID = "ID_5" >
+    <device ID="ID_5">
         <component>
             <name>Block</name>
             <country>China</country>
