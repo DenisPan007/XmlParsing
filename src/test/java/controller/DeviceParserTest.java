@@ -24,16 +24,37 @@ public class DeviceParserTest {
         Component c4 = new Component("Block","Russia",2,true,2,LPT,true);
         Component c5 = new Component("Mouse","USA",3,true,2,LPT,true);
         Component c6 = new Component("Printer","USA",10,true,2,LPT,true);
+        Component c7 = new Component("Block","Russia",2,true,3,COM,true);
+        Component c8 = new Component("Monitor","England",10,true,3,COM,true);
+        Component c9 = new Component("Printer","USA",15,true,2,LPT,true);
+        Component c10 = new Component("Keyboard","China",20,true,2,LPT,true);
+
+        Component c11 = new Component("Block","China",20,true,2,COM,true);
+        Component c12 = new Component("Display","Russia",22,true,10,USB,true);
+        Component c13 = new Component("Mouse","Russia",3,true,2,LPT,true);
+        Component c14 = new Component("Webcam","England",5,true,3,USB,false);
+
+        Component c15 = new Component("Display","USA",20,true,4,COM,true);
+        Component c16 = new Component("Block","China",30,false,30,COM,true);
         Device d1 = new Device();
         Device d2 = new Device();
         Device d3 = new Device();
+        Device d4 = new Device();
+        Device d5 = new Device();
+        Device d6 = new Device();
         d1.setID("ID_1");
         d2.setID("ID_2");
         d3.setID("ID_3");
+        d4.setID("ID_4");
+        d5.setID("ID_5");
+        d6.setID("ID_6");
         d1.setComponents(Arrays.asList(c1,c2));
         d2.setComponents(Arrays.asList(c3));
         d3.setComponents(Arrays.asList(c4,c5,c6));
-        expectedSet.addAll(Arrays.asList(d1,d2,d3));
+        d4.setComponents(Arrays.asList(c7,c8,c9,c10));
+        d5.setComponents(Arrays.asList(c11,c12,c13,c14));
+        d6.setComponents(Arrays.asList(c15,c16));
+        expectedSet.addAll(Arrays.asList(d1,d2,d3,d4,d5,d6));
 
     }
 

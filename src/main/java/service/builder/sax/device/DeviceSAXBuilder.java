@@ -16,13 +16,14 @@ public class DeviceSAXBuilder extends AbstractEntitiesBuilder<Device> {
     private DeviceHandler deviceHandler;
     private XMLReader reader;
 
-    public DeviceSAXBuilder() {
+    public DeviceSAXBuilder() throws BuilderException {
         deviceHandler = new DeviceHandler();
         try {
             reader = XMLReaderFactory.createXMLReader();
             reader.setContentHandler(deviceHandler);
         } catch (SAXException e) {
             LOGGER.error(e);
+            throw new BuilderException("Can't create XMLReader",e);
         }
     }
 
@@ -33,7 +34,7 @@ public class DeviceSAXBuilder extends AbstractEntitiesBuilder<Device> {
             reader.parse(fileName);
         } catch (IOException | org.xml.sax.SAXException e) {
             LOGGER.error(e);
-            throw  new BuilderException(e);
+            throw  new BuilderException("Can't read file",e);
         }
         entities = deviceHandler.getDevices();
     }

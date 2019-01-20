@@ -14,6 +14,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import service.builder.sax.BuilderException;
 
 
 import javax.xml.parsers.DocumentBuilder;
@@ -24,20 +25,20 @@ public class DeviceDOMBuilder extends AbstractEntitiesBuilder<Device> {
     private static final Logger LOGGER = LogManager.getLogger();
     private DocumentBuilder docBuilder;
 
-    public DeviceDOMBuilder() {
+    public DeviceDOMBuilder() throws BuilderException {
         super();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
             LOGGER.log(Level.ERROR, e.getMessage());
+            throw new BuilderException("Can't create XMLReader",e);
         }
     }
 
     @Override
-    public void buildSetEntities(String fileName) {
+    public void buildSetEntities(String fileName) throws BuilderException {
         Document doc;
-        LOGGER.log(Level.DEBUG, "Start parsing...");
         try {
             doc = docBuilder.parse(fileName);
             Element root = doc.getDocumentElement();
@@ -50,6 +51,7 @@ public class DeviceDOMBuilder extends AbstractEntitiesBuilder<Device> {
             }
         } catch (IOException | SAXException e) {
             LOGGER.log(Level.ERROR, e.getMessage());
+            throw new BuilderException(e);
         }
     }
 

@@ -9,6 +9,7 @@ import entity.device.PortEnum;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import service.builder.AbstractEntitiesBuilder;
+import service.builder.sax.BuilderException;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -28,7 +29,7 @@ public class DeviceStAXBuilder extends AbstractEntitiesBuilder<Device> {
     }
 
     @Override
-    public void buildSetEntities(String fileName) {
+    public void buildSetEntities(String fileName) throws BuilderException {
         FileInputStream inputStream = null;
         XMLStreamReader reader;
         String name;
@@ -40,13 +41,14 @@ public class DeviceStAXBuilder extends AbstractEntitiesBuilder<Device> {
                 if (type == XMLStreamConstants.START_ELEMENT) {
                     name = reader.getLocalName();
                     if (DeviceEnum.valueOf(name.toUpperCase()) == DeviceEnum.DEVICE) {
-                        Device device = buildDevice(reader, name);
+                        Device device = buildDevice(reader);
                         entities.add(device);
                     }
                 }
             }
         } catch (XMLStreamException | FileNotFoundException ex) {
             LOGGER.error(ex);
+            throw new BuilderException(ex);
         } finally {
             try {
                 if (inputStream != null) {
@@ -58,13 +60,13 @@ public class DeviceStAXBuilder extends AbstractEntitiesBuilder<Device> {
         }
     }
 
-    private Device buildDevice(XMLStreamReader reader, String bankType) throws XMLStreamException /*ParsingException */ {
+    private Device buildDevice(XMLStreamReader reader) throws XMLStreamException{
         Device device = new Device();
         device.setID(reader.getAttributeValue(null, DeviceEnum.ID.getValue()));
         return fill(reader, device);
     }
 
-    private Device fill(XMLStreamReader reader, Device device) throws XMLStreamException/*, ParsingException*/ {
+    private Device fill(XMLStreamReader reader, Device device) throws XMLStreamException{
         String name;
         while (reader.hasNext()) {
             int type = reader.next();

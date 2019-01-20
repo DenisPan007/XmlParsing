@@ -26,8 +26,22 @@
 
     <complexType name="Component">
         <sequence>
-            <element name="name" type="string"/>
-            <element name="country" type="string"/>
+            <element name="name">
+                <simpleType>
+                    <restriction base="string">
+                        <minLength value="3"/>
+                        <maxLength value="50"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="country">
+                <simpleType>
+                    <restriction base="string">
+                        <minLength value="2"/>
+                        <maxLength value="50"/>
+                    </restriction>
+                </simpleType>
+            </element>
             <element name="price" type="positiveInteger"/>
             <element name="peripheral" type="boolean"/>
             <element name="power_Consumption_Watt" type="positiveInteger"/>
