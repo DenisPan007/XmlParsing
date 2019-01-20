@@ -2,12 +2,11 @@ package service.builder.stax;
 
 import org.junit.Test;
 
-public class TariffsStAxBuilderTest {
+public class TariffsStAXBuilderTest {
 
     @Test
     public void buildSetEntities() {
-        TariffsStAxBuilder stAxBuilder = new TariffsStAxBuilder();
-        stAxBuilder.buildSetEntities("Tariffs.xml");
-        System.out.println(stAxBuilder.getEntities());
+        TariffsStAXBuilder stAxBuilder = new TariffsStAXBuilder();
+        stAxBuilder.buildSetEntities("src/test/resources/device_files/Tariffs.xml");
     }
 }
