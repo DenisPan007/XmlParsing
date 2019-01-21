@@ -2,7 +2,7 @@ package service.builder.stax;
 
 import org.junit.Test;
 
-public class TariffsStAXBuilderTest {
+public class TariffsStAxBuilderTest {
 
     @Test
     public void buildSetEntities() {
